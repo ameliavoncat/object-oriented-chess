@@ -1,0 +1,4 @@
+class BlackQueen
+
+
+end
