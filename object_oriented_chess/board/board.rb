@@ -20,13 +20,10 @@ class Board
     @state.each {|row|
       accumulator = []
       row.each {|square|
-        accumulator.push(square.icon)
+        accumulator.push('[ ' + square.icon + ' ]')
       }
       puts(accumulator.join)
     }
-    puts('displaying')
-    puts @state
-
   end
 
 end

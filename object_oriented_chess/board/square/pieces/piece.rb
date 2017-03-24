@@ -1,6 +1,6 @@
 class Piece
   attr_accessor :type, :color, :icon
-  def initialize(type = '', color = '', icon = '')
+  def initialize(type = '', color = '', icon = ' ')
     @type = type
     @color = color
     @icon = icon
