@@ -1,4 +1,3 @@
-require_relative './object_oriented_chess/board/square/square_content.rb'
+require_relative './object_oriented_chess/board/board.rb'
 
-white_pawn = SquareContent.is( 'WhitePawn' )
-puts(white_pawn.validate_move, white_pawn.type, white_pawn.color, white_pawn.icon)
+Board.new

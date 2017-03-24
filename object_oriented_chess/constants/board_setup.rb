@@ -6,7 +6,7 @@ BOARD_SETUP = [
     'WhiteQueen',
     'WhiteKing',
     'WhiteBishop',
-    'WhiteKnight'
+    'WhiteKnight',
     'WhiteRook'
   ],
   [
