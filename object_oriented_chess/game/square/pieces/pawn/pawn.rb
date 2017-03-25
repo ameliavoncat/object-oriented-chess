@@ -1,4 +1,3 @@
-require_relative '../../../../error'
 require_relative '../piece'
 
 class Pawn < Piece

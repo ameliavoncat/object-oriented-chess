@@ -1,3 +1,4 @@
+require_relative '../../../../error'
 require_relative './pawn'
 
 class WhitePawn < Pawn
