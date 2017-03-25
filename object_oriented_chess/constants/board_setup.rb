@@ -37,8 +37,8 @@ BOARD_SETUP = [
     'BlackRook',
     'BlackKnight',
     'BlackBishop',
-    'WhiteQueen',
-    'WhiteKing',
+    'BlackQueen',
+    'BlackKing',
     'BlackBishop',
     'BlackKnight',
     'BlackRook'
