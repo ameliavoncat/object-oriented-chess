@@ -1,3 +1,4 @@
+require_relative '../../../../error'
 require_relative '../piece'
 
 class King < Piece

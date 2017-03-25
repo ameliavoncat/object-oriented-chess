@@ -1,3 +1,4 @@
+require_relative '../../../../error'
 require_relative '../piece'
 
 class Rook < Piece
@@ -5,8 +6,8 @@ class Rook < Piece
     super(type, color, icon)
   end
 
-  def validate(start_square, target_square)
-    'No validate method yet.'
-    true
-  end
+  # def validate(start_square, target_square)
+  #   'No validate method yet.'
+  #   true
+  # end
 end

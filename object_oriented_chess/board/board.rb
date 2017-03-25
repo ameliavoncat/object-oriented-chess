@@ -1,17 +1,18 @@
 require_relative '../constants/board_setup'
 require_relative './square/square_content'
+require_relative '../error'
 require 'colorize'
 
 class Board
   def initialize(state = BOARD_SETUP, turn = {player: 'White', number: 1})
-    puts('Welcome to Chess!'.black.on_red)
+    puts('Welcome to Chess!'.white.on_red)
     @state = set_board(state)
     @turn = turn
     display
   end
 
   def set_board(state)
-    puts 'setting the board ...'.white
+    puts 'setting the board ...'.white.on_red
     row_id = 1
     state.map {|row|
       row.map {|piece|
@@ -89,12 +90,13 @@ class Board
   def validate_move(start_square, target_square)
     piece = @state[start_square[:row]][start_square[:column]]
     target_piece = @state[target_square[:row]][target_square[:column]]
-    return own_piece if piece.color === target_piece.color
-    piece.validate(start_square, target_square)
+    validated = piece.validate(start_square, target_square)
+    return own_piece if piece.color === target_piece.color && piece.type != ''
+    validated
   end
 
   def own_piece
-    puts('You cannot capture your own piece.')
+    Error.message('own_piece')
     false
   end
 
