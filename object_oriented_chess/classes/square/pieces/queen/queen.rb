@@ -1,4 +1,4 @@
-require_relative '../../../../error'
+require_relative '../../../../modules/error'
 require_relative '../piece'
 
 class Queen < Piece

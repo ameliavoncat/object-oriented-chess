@@ -1,8 +1,8 @@
-require_relative '../../../error'
+require_relative '../../../modules/error'
 require_relative './piece'
 
 class Empty < Piece
-  def validate(start_square, target_square)
+  def validate(move)
     Error.message('validate_empty')
     false
   end
