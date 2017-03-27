@@ -7,4 +7,9 @@ class Square
     @column = column
     @piece = SquareContent.is(piece)
   end
+
+  def column_to_index(column = @column)
+    letters = ('A'..'H').to_a
+    letters.find_index(column)
+  end
 end

@@ -6,7 +6,7 @@ class Rook < Piece
     super(type, color, icon)
   end
 
-  def validate(move)
+  def validator(move)
     start = move[:start]
     target = move[:target]
 

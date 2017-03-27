@@ -16,13 +16,9 @@ module Move
       start: start_square,
       target: target_square
     }
-    return get(board_state) if !Validate.move(move)
+    return get(board_state) if !Validate.move(move, board_state)
     execute(move, board_state)
     move
-  end
-
-  def self.validate_input( input )
-    true
   end
 
   def self.find_square( square_id, state )
@@ -63,16 +59,4 @@ module Move
     }
     accumulator
   end
-
-  # def own_piece
-  #   Error.message('own_piece')
-  #   false
-  # end
-
-  # def mark_clear_path(start_square, target_square)
-  #   if
-  #   start_square[:clear_path] =
-  #     true if (@state[start_square[:row]][start_square[:column]]
-  #       .clear_path_validator(start_square, target_square))
-  # end
 end

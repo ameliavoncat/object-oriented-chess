@@ -6,8 +6,15 @@ class King < Piece
     super(type, color, icon)
   end
 
-  def validate(start_square, target_square)
-    'No validate method yet.'
-    true
+  def validator(move)
+    start = move[:start]
+    target = move[:target]
+
+    validated = (
+      ((start.row - target.row).abs === 1 &&
+        (start.column_to_index - target.column_to_index).abs < 2) ||
+      ((start.column_to_index - target.column_to_index).abs === 1 &&
+        (start.row - target.row).abs < 2)
+    )
   end
 end

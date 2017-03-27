@@ -21,8 +21,9 @@ class WhitePawn < Pawn
 
   def validate_capture(start_square, target_square)
     puts 'validating capture'
-    start_column = column_to_index(start_square.column)
-    target_column = column_to_index(target_square.column)
+    letters = ('A'..'H').to_a
+    start_column = letters.find_index(start_square.column)
+    target_column = letters.find_index(target_square.column)
 
     validated = (
         target_column === start_column + 1 ||

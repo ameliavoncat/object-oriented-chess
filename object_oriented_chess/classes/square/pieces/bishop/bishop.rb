@@ -5,9 +5,15 @@ class Bishop < Piece
   def initialize(type = "Pawn", color, icon)
     super(type, color, icon)
   end
-  #
-  # def validate(start_square, target_square)
-  #   'No validate method yet.'
-  #   true
-  # end
+
+  def validator(move)
+    start = move[:start]
+    target = move[:target]
+    puts start.row - target.row
+    puts start.column_to_index - target.column_to_index
+
+    validated = (
+      (start.row - target.row).abs === (start.column_to_index - target.column_to_index).abs
+    )
+  end
 end
