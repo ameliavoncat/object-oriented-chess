@@ -1,6 +1,5 @@
 require_relative '../constants/board_setup'
-require_relative './square/square_content'
-require_relative './square/square'
+require_relative './square'
 require_relative '../modules/error'
 require 'colorize'
 

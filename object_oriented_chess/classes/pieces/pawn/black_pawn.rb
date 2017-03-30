@@ -13,15 +13,12 @@ class BlackPawn < Pawn
       ) && (
         target_square.column === start_square.column
       )
-
-    Error.message('validate_false') if !validated
-    validated
   end
 
   def validate_capture(start_square, target_square)
     puts 'validating capture'
-    start_column = column_to_index(start_square.column)
-    target_column = column_to_index(target_square.column)
+    start_column = start_square.column_to_index
+    target_column = target_square.column_to_index
 
     validated = (
         target_column === start_column + 1 ||
@@ -29,8 +26,5 @@ class BlackPawn < Pawn
       ) && (
         target_square.row === start_square.row - 1
       )
-
-    Error.message('validate_false') if !validated
-    validated
   end
 end

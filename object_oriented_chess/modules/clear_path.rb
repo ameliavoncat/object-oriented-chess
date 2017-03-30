@@ -6,8 +6,8 @@ module ClearPath
     col_index = start.column_to_index
     target_col_index = target.column_to_index
 
-    row = start.row.to_i
-    target_row = target.row.to_i
+    row = start.row_to_index
+    target_row = target.row_to_index
 
     if row < target_row && col_index < target_col_index
       col_index += 1
@@ -52,8 +52,8 @@ module ClearPath
     col_index = start.column_to_index
     target_col_index = target.column_to_index
 
-    row = start.row.to_i
-    target_row = target.row.to_i
+    row = start.row_to_index
+    target_row = target.row_to_index
 
     if col_index < target_col_index
       while col_index < target_col_index
@@ -78,8 +78,8 @@ module ClearPath
     col_index = start.column_to_index
     target_col_index = target.column_to_index
 
-    row = start.row.to_i
-    target_row = target.row.to_i
+    row = start.row_to_index
+    target_row = target.row_to_index
 
     if row < target_row
       row += 1

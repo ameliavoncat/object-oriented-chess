@@ -1,6 +1,6 @@
 require 'colorize'
 
-require_relative '../../../../modules/error'
+require_relative '../../../modules/error'
 require_relative './pawn'
 
 class WhitePawn < Pawn
@@ -16,9 +16,6 @@ class WhitePawn < Pawn
       ) && (
         target_square.column === start_square.column
       )
-
-    Error.message('validate_false') if !validated
-    validated
   end
 
   def validate_capture(start_square, target_square)
@@ -33,8 +30,5 @@ class WhitePawn < Pawn
       ) && (
         target_square.row === start_square.row + 1
       )
-
-    Error.message('validate_false') if !validated
-    validated
   end
 end

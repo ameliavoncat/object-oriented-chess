@@ -1,4 +1,4 @@
-require_relative '../../../modules/error'
+require_relative '../../modules/error'
 
 class Piece
   attr_accessor :type, :color, :icon

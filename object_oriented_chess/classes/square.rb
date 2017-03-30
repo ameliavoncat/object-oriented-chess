@@ -1,4 +1,4 @@
-require_relative 'square_content'
+require_relative '../modules/square_content'
 
 class Square
   attr_accessor :piece, :column, :row
@@ -11,5 +11,9 @@ class Square
   def column_to_index(column = @column)
     letters = ('A'..'H').to_a
     letters.find_index(column)
+  end
+
+  def row_to_index(row = @row)
+    row.to_i - 1
   end
 end

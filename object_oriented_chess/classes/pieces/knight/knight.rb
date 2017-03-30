@@ -1,4 +1,3 @@
-require_relative '../../../../modules/error'
 require_relative '../piece'
 
 class Knight < Piece

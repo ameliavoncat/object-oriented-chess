@@ -1,4 +1,4 @@
-base_path = '../classes/square/pieces/'
+base_path = '../classes/pieces/'
 require_relative base_path + 'pawn/white_pawn'
 require_relative base_path + 'pawn/black_pawn'
 require_relative base_path + 'rook/white_rook'

@@ -1,6 +1,6 @@
 require_relative './error'
 require_relative './validate'
-require_relative '../classes/square/square_content'
+require_relative './square_content'
 
 module Move
   def self.get(board_state)
