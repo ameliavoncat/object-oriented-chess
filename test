@@ -1,0 +1,4 @@
+require 'colorize'
+puts 'Running tests...'.yellow
+
+exec('rspec', './config/rspec.config.rb', '--pattern', 'object_oriented_chess/**/__spec__/*_spec.rb' )

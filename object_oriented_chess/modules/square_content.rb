@@ -1,4 +1,4 @@
-require_relative '../../constants/piece_classes'
+require_relative '../constants/piece_classes'
 
 module SquareContent
   def self.is(piece)
