@@ -1,10 +1,11 @@
 require_relative './classes/board'
+require_relative './classes/turn'
 require_relative './modules/move'
 require_relative './modules/display'
 require 'colorize'
 
 class Game
-  def initialize(turn = {player: 'White', number: 1}, board = Board.new)
+  def initialize(turn = Turn.new, board = Board.new)
     @turn = turn
     @board = board
     start
@@ -15,17 +16,12 @@ class Game
     display
   end
 
-  def next_turn
-    @turn[:player] = (@turn[:player] === 'White') ?  'Black' : 'White'
-    @turn[:number] += 1 if @turn[:player] === 'White'
-    display
-  end
-
   def handle_move
     move = Move.get(@board.state)
     move[:target].piece.moved
     #TODO keep a record of the move for display and undo
-    next_turn
+    @turn.next
+    display
   end
 
   def display

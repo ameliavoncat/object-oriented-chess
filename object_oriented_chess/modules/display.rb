@@ -3,7 +3,7 @@ require 'colorize'
 module Display
   def self.turn_announcement(turn)
     white_padding(1)
-    puts '             Turn '.black.on_white + turn[:number].to_s.black.on_white + ' for player: '.black.on_white + turn[:player].black.on_white + '.'.black.on_white + '            '.on_white
+    puts '             Turn '.black.on_white + turn.number.to_s.black.on_white + ' for player: '.black.on_white + turn.player.black.on_white + '.'.black.on_white + '            '.on_white
     white_padding(1)
   end
 
