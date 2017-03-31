@@ -47,4 +47,12 @@ module Validate
     false
   end
 
+  def self.check(move)
+    puts 'check'
+  end
+
+  def self.checkmate(move)
+    puts 'you win'
+  end
+
 end

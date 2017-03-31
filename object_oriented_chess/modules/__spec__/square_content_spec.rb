@@ -1,8 +1,8 @@
 require 'colorize'
 
 require_relative '../square_content'
-require_relative '../../classes/square/pieces/queen/white_queen'
-require_relative '../../classes/square/pieces/empty'
+require_relative '../../classes/pieces/queen/white_queen'
+require_relative '../../classes/pieces/empty'
 
 RSpec.describe 'SquareContent'.light_white do
   describe "#is".light_red do

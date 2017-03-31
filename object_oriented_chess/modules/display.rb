@@ -1,6 +1,22 @@
 require 'colorize'
 
 module Display
+  def self.welcome
+    puts('Welcome to Chess!'.black.on_white)
+  end
+
+  def self.setup
+    puts 'setting the board ...'.black.on_white
+  end
+
+  def self.history(moves)
+    white_padding(1)
+    puts '                 Move History                     '.black.on_white
+    white_padding(1)
+
+    moves.each {|move| puts move[:move]}
+  end
+
   def self.turn_announcement(turn)
     white_padding(1)
     puts '             Turn '.black.on_white + turn.number.to_s.black.on_white + ' for player: '.black.on_white + turn.player.black.on_white + '.'.black.on_white + '            '.on_white
